@@ -1,9 +1,11 @@
 // Create a function called getAvailableBooks that returns an array of all available
 //books.
 function getAvailableBooks(){
-    let foundBooks =[]
-    foundBooks.push(books)
-    
+    let foundBooks =[];
+    if (title in books){
+        foundBooks.push(this,title)
+    }
+    console.log(foundBooks);
 }
 getAvailableBooks();
 
@@ -13,11 +15,14 @@ getAvailableBooks();
 //output -array of books
 
  function getBooksByAuthor(author) {
-    books.find(title)
-   let authorArray=[]
+   let authorArray=[];
+   if (author in books){
+    authorArray.push(books)
+    console.log(authorArray)
+   } 
 
 
-   console.log(authorArray);
+//    console.log(authorArray);
     
  }
  getBooksByAuthor(author)
@@ -36,7 +41,32 @@ function addNewBook(book) {
     books.add(book)
     
 }
+console.log(books);
 
+//Create a function checkoutBook that takes a book title as an argument and changes
+// the book's isAvailable property to false. If the book is not found in the library, the
+// function should return a message indicating that the book is not available.
+ function checkoutBook(title) {
+    if ("The beautiful girl" in title){
+        console.log(`The book is not available and ${this,isAvailable}`)
+    }
+ }
+ checkoutBook(title)
+
+
+//  Create a function returnBook that takes a book title as an argument and changes the
+// book's isAvailable property to true. If the book is not found in the library, the function
+// should return a message indicating that the book does not belong to the library.
+
+function returnBook(title) {
+    if ("Great Expectations" in title){
+        console.log(`${this,isAvailable}`)
+    }
+    else{
+        console.log(`The book does not belong in the library`);
+    }
+}
+returnBook(books)
 const books = [
 { title: 'The Catcher in the Rye', author: 'J.D. Salinger', publicationYear: 1951,
 isAvailable: true },
